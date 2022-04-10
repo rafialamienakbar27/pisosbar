@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pengajuans",
+      "handler": "pengajuan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pengajuans/count",
+      "handler": "pengajuan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pengajuans/:id",
+      "handler": "pengajuan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pengajuans",
+      "handler": "pengajuan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pengajuans/:id",
+      "handler": "pengajuan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pengajuans/:id",
+      "handler": "pengajuan.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

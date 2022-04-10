@@ -1,0 +1,94 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pengajuans",
+  "info": {
+    "name": "Pengajuan",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "umur": {
+      "type": "integer",
+      "required": true,
+      "min": 25
+    },
+    "jenis_kelamin": {
+      "type": "enumeration",
+      "enum": [
+        "laki_laki",
+        "perempuan"
+      ],
+      "required": true
+    },
+    "alamat": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 255
+    },
+    "penghasilan_sebelum_pandemi": {
+      "type": "biginteger",
+      "required": true
+    },
+    "penghasilan_setelah_pandemi": {
+      "type": "biginteger",
+      "required": true
+    },
+    "alasan_membutuhkan_bantuan": {
+      "type": "enumeration",
+      "enum": [
+        "kehilangan_pekerjaan",
+        "kepala_keluarga_terdampak_atau_korban_covid",
+        "tergolong_fakir_miskin_semenjak_sebelum_covid",
+        "lainnya"
+      ],
+      "required": true
+    },
+    "rt": {
+      "type": "string",
+      "required": true
+    },
+    "rw": {
+      "type": "string",
+      "required": true
+    },
+    "foto_ktp": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "foto_kartu_keluarga": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "nik": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "nomor_kartu_keluarga": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    }
+  }
+}
